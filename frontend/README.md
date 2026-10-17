@@ -1,16 +1,100 @@
-# React + Vite
+# Full-Stack MERN Blog Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A full-stack blog application built using the MERN stack.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- User registration and login
+- JWT-based authentication
+- Create blog posts
+- Edit your own blog posts
+- Delete your own blog posts
+- View all blog posts
+- Search blog posts
+- Add comments
+- View comments
+- My Blogs section
+- Protected post and comment operations
 
-## React Compiler
+## Technologies Used
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- Vite
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose
+- JWT
+- bcryptjs
+- JavaScript
+- HTML
+- CSS
 
-## Expanding the Oxlint configuration
+## Project Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+```text
+blog-application/
+├── backend/
+│   ├── middleware/
+│   ├── models/
+│   ├── routes/
+│   ├── server.js
+│   └── package.json
+│
+├── frontend/
+│   ├── src/
+│   │   ├── pages/
+│   │   ├── App.jsx
+│   │   └── main.jsx
+│   └── package.json
+│
+└── .gitignore
+```
+
+## Running the Application
+
+### Backend
+
+```bash
+cd backend
+npm install
+node server.js
+```
+
+Backend runs on:
+
+```text
+http://localhost:5000
+```
+
+### Frontend
+
+Open another terminal:
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+The frontend runs on the Vite development URL shown in the terminal.
+
+## Environment Variables
+
+Create a `.env` file inside the `backend` folder:
+
+```text
+MONGODB_URI=your_mongodb_connection_string
+PORT=5000
+JWT_SECRET=your_jwt_secret
+```
+
+Do not upload the `.env` file to GitHub.
+
+## Authentication
+
+The application uses JWT authentication to protect creating, editing, and deleting blog posts and adding comments.
+
+## Author
+
+Thanushree G M
